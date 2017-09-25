@@ -58,7 +58,20 @@ describe('Parsing --chrome-flags', () => {
     assert.deepStrictEqual([], parseChromeFlags());
   });
 
+  it('keeps --no-flags untouched, #3003', () => {
+    assert.deepStrictEqual(['--no-sandbox'], parseChromeFlags('--no-sandbox'));
+  });
+
+  it('handles numeric values', () => {
+    assert.deepStrictEqual(['--log-level=0'], parseChromeFlags('--log-level=0'));
+  });
+
   it('returns flags correctly for issue 2817', () => {
+    assert.deepStrictEqual(
+      ['--user-agent="iPhone UA Test"'],
+      parseChromeFlags('--user-agent="iPhone UA Test"')
+    );
+
     assert.deepStrictEqual(
       ['--host-resolver-rules="MAP www.example.org:443 127.0.0.1:8443"'],
       parseChromeFlags('--host-resolver-rules="MAP www.example.org:443 127.0.0.1:8443"')
