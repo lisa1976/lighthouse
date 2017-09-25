@@ -12,7 +12,7 @@ import {Results} from './types/types';
 import {Flags} from './cli-flags';
 import {launch, LaunchedChrome} from '../chrome-launcher/chrome-launcher';
 
-const yargsParser = require("yargs-parser")
+const yargsParser = require('yargs-parser');
 const lighthouse = require('../lighthouse-core');
 const log = require('lighthouse-logger');
 const getFilenamePrefix = require('../lighthouse-core/lib/file-namer.js').getFilenamePrefix;
@@ -31,20 +31,21 @@ interface LighthouseError extends Error {
 
 // exported for testing
 export function parseChromeFlags(flags: string) {
-  const parsed = yargsParser(flags || '', {
-    configuration: {
-      'camel-case-expansion': false,
-      'boolean-negation': false
-    }
-  });
+  const parsed = yargsParser(
+      flags || '', {configuration: {'camel-case-expansion': false, 'boolean-negation': false}});
 
-  const addQuotes = (str:String) => (typeof str === 'string' && str.includes(' ')) ? `"${str}"` : str;
+  const addQuotes = (str: String) =>
+      (typeof str === 'string' && str.includes(' ')) ? `"${str}"` : str;
 
-  return Object.keys(parsed)
-    // Remove unnecessary _ item provided by yargs,
-    .filter(key => key !== '_')
-    // Avoid '=true', then reintroduce quotes if required
-    .map(key => `--${key}` + (parsed[key] === true ? '' : `=${addQuotes(parsed[key])}`));
+  return Object
+      .keys(parsed)
+      // Remove unnecessary _ item provided by yargs,
+      .filter(key => key !== '_')
+      // Avoid '=true', then reintroduce quotes if required
+      .map(key => {
+        if (parsed[key] === true) return `--${key}`;
+        return `--${key}=${addQuotes(parsed[key])}`;
+      });
 }
 
 /**
