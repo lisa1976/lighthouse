@@ -12,9 +12,9 @@ const Driver = require('../lighthouse-core/gather/driver.js');
 import {GetValidOutputOptions, OutputMode} from './printer';
 
 export interface Flags {
-  port: number, chromeFlags: string, output: any, outputPath: string,
-      saveArtifacts: boolean, saveAssets: boolean, view: boolean, maxWaitForLoad: number,
-      logLevel: string, hostname: string, blockedUrlPatterns: string[]
+  port: number, chromeFlags: string, output: any, outputPath: string, saveArtifacts: boolean,
+      saveAssets: boolean, view: boolean, maxWaitForLoad: number, logLevel: string,
+      hostname: string, blockedUrlPatterns: string[]
 }
 
 export function getFlags(manualArgv?: string) {
@@ -99,7 +99,7 @@ Example: --output-path=./lighthouse-results.html`,
       .boolean([
         'disable-storage-reset', 'disable-device-emulation', 'disable-cpu-throttling',
         'disable-network-throttling', 'save-assets', 'save-artifacts', 'list-all-audits',
-        'list-trace-categories', 'perf', 'view', 'verbose', 'quiet', 'help',
+        'list-trace-categories', 'perf', 'view', 'verbose', 'quiet', 'help'
       ])
       .choices('output', GetValidOutputOptions())
       // force as an array
