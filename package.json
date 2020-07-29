@@ -79,7 +79,7 @@
     "mkdirp": "0.5.1",
     "opn": "4.0.2",
     "rimraf": "^2.6.1",
-    "speedline": "1.2.0",
+    "speedline": "1.4.3",
     "update-notifier": "^2.1.0",
     "whatwg-url": "4.0.0",
     "ws": "1.1.2",
