@@ -46,7 +46,9 @@
     "smokehouse": "node lighthouse-cli/test/smokehouse/smokehouse.js",
     "deploy-viewer": "cd lighthouse-viewer && gulp deploy",
     "bundlesize": "bundlesize",
-    "plots-smoke": "bash plots/test/smoke.sh"
+    "plots-smoke": "bash plots/test/smoke.sh",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "devDependencies": {
     "@types/node": "^6.0.45",
@@ -70,20 +72,21 @@
   "dependencies": {
     "axe-core": "2.4.1",
     "chrome-devtools-frontend": "1.0.422034",
-    "chrome-launcher": "0.8.0",
+    "chrome-launcher": "0.13.2",
     "devtools-timeline-model": "1.1.6",
-    "jpeg-js": "0.1.2",
+    "jpeg-js": "0.4.0",
     "json-stringify-safe": "5.0.1",
     "lighthouse-logger": "^1.0.0",
     "metaviewport-parser": "0.1.0",
-    "mkdirp": "0.5.1",
+    "mkdirp": "0.5.2",
     "opn": "4.0.2",
     "rimraf": "^2.6.1",
-    "speedline": "1.2.0",
+    "speedline": "1.4.3",
     "update-notifier": "^2.1.0",
     "whatwg-url": "4.0.0",
     "ws": "1.1.2",
-    "yargs": "3.32.0"
+    "yargs": "3.32.0",
+    "snyk": "^1.467.0"
   },
   "repository": "GoogleChrome/lighthouse",
   "keywords": [
@@ -106,5 +109,6 @@
       "threshold": "60 Kb"
     }
   ],
-  "homepage": "https://github.com/GoogleChrome/lighthouse#readme"
+  "homepage": "https://github.com/GoogleChrome/lighthouse#readme",
+  "snyk": true
 }
