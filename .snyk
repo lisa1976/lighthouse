@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - lighthouse-logger > debug:
+        patched: '2022-09-25T23:20:37.505Z'
+    - chrome-launcher > lighthouse-logger > debug:
+        patched: '2022-09-25T23:20:37.505Z'
