@@ -2378,6 +2378,11 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+mkdirp@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.0.tgz#8487b07699b70c9b06fce47b3ce28d8176c13c75"
+  integrity sha512-4Pb+8NJ5DdvaWD797hKOM28wMXsObb4HppQdIwKUHFiB69ICZ4wktOE+qsGGBy7GtwgYNizp0R9KEy4zKYBLMg==
+
 mocha@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/mocha/-/mocha-3.2.0.tgz#7dc4f45e5088075171a68896814e6ae9eb7a85e3"
@@ -3620,9 +3625,10 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.1.tgz#082ddb6c641e85d4bb451f03d52f06eabdb1f018"
+ws@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
+  integrity sha1-iiRPoFJAHgjJiGz0SoUYnh/UBn8=
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
