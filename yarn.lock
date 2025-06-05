@@ -10,6 +10,13 @@
   version "0.3.29"
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
 
+"@types/node@*":
+  version "22.15.29"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.15.29.tgz#c75999124a8224a3f79dd8b6ccfb37d74098f678"
+  integrity sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==
+  dependencies:
+    undici-types "~6.21.0"
+
 "@types/node@6.0.66":
   version "6.0.66"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.66.tgz#5680b74a6135d33d4c00447e7c3dc691a4601625"
@@ -200,9 +207,10 @@ axios@^0.16.2:
     follow-redirects "^1.2.3"
     is-buffer "^1.1.5"
 
-babar@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/babar/-/babar-0.0.3.tgz#2f394d4a5918f7e1ae9e5408e9a96f3f935ee1e2"
+babar@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/babar/-/babar-0.2.0.tgz#79bc0f029721467207f2b6baedf96b3938ad7db0"
+  integrity sha512-bH01czBTWEbf7Q6qje/4raQEG14jhPTQJmpj1Uxzw92VCr9yQcCWN+SbKTg34aOvWDs6wrhjfr6SGC8AaeSzaA==
   dependencies:
     colors "~0.6.2"
 
@@ -1918,9 +1926,14 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jpeg-js@0.1.2, jpeg-js@^0.1.2:
+jpeg-js@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.1.2.tgz#135b992c0575c985cfa0f494a3227ed238583ece"
+
+jpeg-js@^0.4.1:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.4.4.tgz#a9f1c6f1f9f0fa80cdb3484ed9635054d28936aa"
+  integrity sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==
 
 js-tokens@^1.0.1:
   version "1.0.3"
@@ -2256,7 +2269,7 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^1.0.1"
 
-loud-rejection@^1.0.0, loud-rejection@^1.3.0:
+loud-rejection@^1.0.0, loud-rejection@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
   dependencies:
@@ -3110,14 +3123,16 @@ spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
 
-speedline@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/speedline/-/speedline-1.2.0.tgz#f5828dcf8e9b96a9f6c1da8ab298538820c6668d"
+speedline@1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/speedline/-/speedline-1.4.3.tgz#ea9f88409aa4e5f465831e205f90463e1d120686"
+  integrity sha512-ifP1emXKck91aNG5u8/bib7eikQ/Uu0FoblidkkcfFnkR4PHZls0bpprhso3UbimI/SLDsfgZlz0/3vvmPN5mQ==
   dependencies:
-    babar "0.0.3"
+    "@types/node" "*"
+    babar "0.2.0"
     image-ssim "^0.2.0"
-    jpeg-js "^0.1.2"
-    loud-rejection "^1.3.0"
+    jpeg-js "^0.4.1"
+    loud-rejection "^1.6.0"
     meow "^3.7.0"
 
 sprintf-js@~1.0.2:
@@ -3375,6 +3390,11 @@ unc-path-regex@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
 
+undici-types@~6.21.0:
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
+  integrity sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==
+
 unique-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unique-stream/-/unique-stream-1.0.0.tgz#d59a4a75427447d9aa6c91e70263f8d26a4b104b"
@@ -3620,9 +3640,10 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.1.tgz#082ddb6c641e85d4bb451f03d52f06eabdb1f018"
+ws@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
+  integrity sha512-lobrh3Dhp6tD1hv7NAIMx+oX/rsH/yd6/4krpBmJ/6ulsMZgQMuttlWTuYVWLV6ZjlpWIOjz55KbQbcKSQywEQ==
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
